@@ -28,6 +28,7 @@ namespace BookStore.WebApi.Controllers
         [HttpGet]
         [Route("get-all-book")]
         public async Task<ActionResult<ServiceResponse<List<BookListDto>>>> Get()
+
         {
             var response = new ServiceResponse<List<BookListDto>>();
             try
@@ -59,7 +60,7 @@ namespace BookStore.WebApi.Controllers
 
         [HttpPost]
         [Route("add-book")]
-        public async Task<ActionResult<ServiceResponse<BookDto>>> Add(BookDto booksDto)
+        public async Task<ActionResult<ServiceResponse<BookDto>>> Add([FromBody]BookDto booksDto)
         {
             var response = new ServiceResponse<BookDto>();
             try
@@ -115,7 +116,7 @@ namespace BookStore.WebApi.Controllers
 
         [HttpPut]
         [Route("update-book")]
-        public async Task<ActionResult<ServiceResponse<BookDto>>> Update(BookDto booksDto)
+        public async Task<ActionResult<ServiceResponse<BookDto>>> Update([FromBody]BookDto booksDto)
         {
             var response = new ServiceResponse<BookDto>();
             try
