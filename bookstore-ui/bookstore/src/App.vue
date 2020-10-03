@@ -121,7 +121,7 @@ export default {
   methods: {
     addBook() {
       const self=this;
-      this.$http.post("add-book", self.booksDto, {headers: {'Content-Type': 'application/json'}}).then(function(response) {
+      this.$http.post("add-book", self.booksDto).then(function(response) {
         alert(response.body.entity);
         if(response.body.isSuccessful == true){
            
