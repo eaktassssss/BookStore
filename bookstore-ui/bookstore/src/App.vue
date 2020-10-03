@@ -114,7 +114,8 @@ export default {
         publisherName: null
       },
       buttonType: false,
-      title: "Kitap Girişi"
+      title: "Kitap Girişi",
+      divShowHide:true
     }
   },
   methods: {
